@@ -1,0 +1,10 @@
+[Unit]
+Description=GPIO Fan Controller Daemon
+
+[Service]
+User=root
+
+ExecStart=/usr/local/sbin/gpio-fan-controller
+
+[Install]
+WantedBy=local-fs.target
