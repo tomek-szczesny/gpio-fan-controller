@@ -36,7 +36,6 @@ install:
 	systemctl start $(EXECS)
 
 uninstall:
-	rm -f ${PREFIX}/bin/${EXECS} ${PREFIX}/sbin/${EXECS}
 	systemctl stop $(EXECS)
 	systemctl disable $(EXECS)
 	rm ${SERVICEPATH}/${SERVICE}
