@@ -68,7 +68,7 @@ void PWM() {
 	struct gpiod_chip *chip;
 	struct gpiod_line *fan;
 	chip = gpiod_chip_open_by_name(chipname);
-	fan = gpiod_chip_get_line(chip, 98);
+	fan = gpiod_chip_get_line(chip, gpio_line);
 	gpiod_line_request_output(fan, "PWM Fan", 0);
 
 	// PWM data in (0 - 1) range
